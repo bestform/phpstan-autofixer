@@ -75,7 +75,7 @@ func parseLine(line string) (StanError, error) {
 		return stanError, fmt.Errorf("cannot parse line number: '%s'", err)
 	}
 	stanError.Line = lineNumber
-	stanError.Message = strings.Join(parts[2:], "")
+	stanError.Message = strings.Join(parts[2:], ":")
 
 	return stanError, nil
 }
